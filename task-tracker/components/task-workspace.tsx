@@ -133,9 +133,9 @@ export function TaskWorkspace() {
     )} </p>
   </section>
 
-     {/* <section aria-label="New task">
+      <section aria-label="New task">
         <TaskInput onAdd={addTask} />
-      </section>*/}
+      </section>
 
       <section aria-label="Tasks">
       <p className="text-sm text-neutral-600">
@@ -149,26 +149,6 @@ export function TaskWorkspace() {
           onDelete={deleteTask}
           onReorder={reorderTasks}
         />
-        {isCreating ? (
-          <div className="h-14 flex items-center px-4 border-b border-neutral-800 bg-neutral-900/20 transition-all mt-2">
-            <input
-              ref={inputRef}
-              type="text"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              onBlur={() => { if (!inputValue.trim()) setIsCreating(false); }}
-              placeholder={inputValue.trim().startsWith('!') ? "★ Creating starred priority..." : "What needs to be done today?"}
-              className="w-full bg-transparent text-base text-neutral-200 placeholder-neutral-700 focus:outline-none"
-            />
-          </div>
-        ) : (
-          <div 
-            onClick={() => setIsCreating(true)}
-            className="h-14 flex items-center px-4 text-sm text-neutral-600 hover:text-neutral-400 cursor-text transition-colors duration-150 group border border-dashed border-transparent hover:border-neutral-900 rounded mt-2"
-          >
-            <span>+ Click canvas space or press <kbd className="text-xs bg-neutral-950 px-1.5 py-0.5 rounded border border-neutral-800 font-mono ml-1">N</kbd> to build task</span>
-          </div>
-        )}
         </div>
       </section>
     </div>
