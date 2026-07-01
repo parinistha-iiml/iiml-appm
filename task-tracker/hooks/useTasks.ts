@@ -179,7 +179,7 @@ export function useTasks() {
     tasks: visibleTasks,
     allTasks: tasks,
     leftovers,
-    handleReviewLeftover
+    handleReviewLeftover,
     selectedDate, 
     setSelectedDate,
     addTask,
